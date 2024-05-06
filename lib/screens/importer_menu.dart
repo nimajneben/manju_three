@@ -48,17 +48,23 @@ class _ImporterMainScreenState extends State<ImporterMainScreen> {
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
             crossAxisCount: 2,
-            children: const <Widget>[
+            children: <Widget>[
+              InkWell(
+                  child: const Card(
+                      child: SizedBox(
+                          width: cardWidth,
+                          height: cardHeight,
+                          child: Center(child: Text('Food Purchases')))),
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: const Text('I was tapped!')));
+                  }),
               Card(
-                  child: SizedBox(
-                      width: cardWidth,
-                      height: cardHeight,
-                      child: Center(child: Text('Food Purchases')))),
-              Card(
-                  child: SizedBox(
-                      width: cardWidth,
-                      height: cardHeight,
-                      child: Center(child: Text('View Complaints')))),
+                child: SizedBox(
+                    width: cardWidth,
+                    height: cardHeight,
+                    child: Center(child: Text('View Complaints'))),
+              ),
               Card(
                   child: SizedBox(
                       width: cardWidth,
