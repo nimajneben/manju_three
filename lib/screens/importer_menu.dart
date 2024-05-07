@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manju_three/screens/importer_import_screen.dart';
 
 class ImporterMainScreen extends StatefulWidget {
   const ImporterMainScreen({super.key, required this.title});
@@ -57,20 +58,25 @@ class _ImporterMainScreenState extends State<ImporterMainScreen> {
                           child: Center(child: Text('Food Purchases')))),
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: const Text('I was tapped!')));
+                        const SnackBar(content: Text('I was tapped!')));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const ImporterImportScreen()));
                   }),
-              Card(
+              const Card(
                 child: SizedBox(
                     width: cardWidth,
                     height: cardHeight,
                     child: Center(child: Text('View Complaints'))),
               ),
-              Card(
+              const Card(
                   child: SizedBox(
                       width: cardWidth,
                       height: cardHeight,
                       child: Center(child: Text('Complaint Form')))),
-              Card(
+              const Card(
                   child: SizedBox(
                       width: cardWidth,
                       height: cardHeight,
