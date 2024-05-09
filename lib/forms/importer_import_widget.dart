@@ -11,10 +11,10 @@ class _ImporterImportWidgetState extends State<ImporterImportWidget> {
   final _formKey = GlobalKey<FormState>();
 
   // Attention variables
-  bool supplier_att = false;
-  bool product_att = false;
-  bool qty_att = false;
-  bool price_att = false;
+  bool fieldErrorSupplier = false;
+  bool fieldErrorProduct= false;
+  bool fieldErrorQty = false;
+  bool fieldErrorPrice = false;
 
   @override
   Widget build(BuildContext context) {
